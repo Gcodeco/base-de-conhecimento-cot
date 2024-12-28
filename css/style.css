@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("/css/acionamento.css");
+@import url("/css/footer.css");
+@import url("/css/header.css");
+@import url("/css/nav.css");
+@import url("/css/searchresult.css");
+@import url("/css/aviso.css");
+@import url("/css/Procedimentos.css");
+@import url("/css/main.css");
+@import url("/css/web-loja.css");
+@import url("/css/arvore.css");
+@import url("/css/arvore2.css");
+
+:root {
+  --color-primary-1: #fff9ea;
+  --color-primary-2: #f80032;
+  --color-primary-3: #f8d477;
+  --color-primary-4: #ffe100;
+  --color-primary-5: #ffcb45;
+  --color-primary-6: #e9a209;
+  --color-primary-7: #ffe8b4;
+
+  --color-neutral-0: #fff;
+  --color-neutral-1: #1d1d1d;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary-1);
+  color: #333;
+}
+
+main {
+  padding: 1rem;
+  max-width: 100%;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social_media_buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap; /* Permite que os botões se movam para a próxima linha se necessário */
+}
+
+.social_media_buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 40px;
+  background-color: var(--color-neutral-0);
+  font-size: 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-neutral-1);
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.social_media_buttons a:hover {
+  box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home {
+  margin-top: 90px; /* Espaçamento acima do ícone */
+  display: flex;
+  position: absolute;
+}
+
+.fa-solid,
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: large;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  main {
+    padding: 0.5rem; /* Reduzir padding em telas menores */
+    max-width: 95%; /* Aumenta a largura máxima em dispositivos móveis */
+  }
+
+  .social_media_buttons {
+    justify-content: center; /* Centraliza os botões em telas menores */
+    gap: 10px; /* Espaçamento reduzido entre os botões */
+  }
+
+  .home-icon {
+    font-size: 20px; /* Tamanho reduzido do ícone em telas menores */
+    padding: 2px; /* Reduz o padding */
+    margin-top: 277px;
+  }
+}

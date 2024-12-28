@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Conhecimento</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/img/fave.png"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  
+  <script src="http://static.tumblr.com/8l2gpxb/lcllulgcn/snowstorm.js"> </script>
+ 
+</head>
+<body>
+  <header>
+    <canvas id="canvas"></canvas>
+  <div class="message">Feliz Natal</div>
+  <div class="tree"></div> 
+  <script src="script.js"></script>
+  
+
+
+    <div class="base-conhecimento">
+      <h1>Base de Conhecimento</h1>
+      <p>Encontre rapidamente as informações necessárias para aprimorar sua produtividade.</p>
+    </div>
+
+    <div id="search">
+      <div class="search">
+        <form id="searchForm" action="#" method="get" onsubmit="return search();">
+          <div class="input-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Digite sua busca" required>
+          </div>
+          <button class="custom-btn btn-10" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+
+    
+      <div class="container-botoes">
+
+
+        
+        <div class="total-loja">
+          <a href="https://redeipe.rnp.br/panorama" target="_blank">RedeIP</a>
+        </div>
+
+        <div class="pasta-validacao">
+          <a href="https://amer3-my.sharepoint.com/personal/jancer_oliveira_americanas_io/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjancer%5Foliveira%5Famericanas%5Fio%2FDocuments%2FValida%C3%A7%C3%A3o%20de%20link%20OI&ga=1" target="_blank">Pasta de Validação</a>
+        </div>
+
+        <div class="web-loja">
+          <a href="index.html" class="home-icon" title="Página Inicial">
+              <i class="fas fa-home"></i>
+          </a>
+        <div class="web-loja">
+          <a href="https://amer3-my.sharepoint.com/:x:/r/personal/3rd_gustavo_souza_americanas_io/_layouts/15/Doc.aspx?sourcedoc=%7B8CA66C14-F57C-4C40-9C73-F2B16BC7F687%7D&file=Web%20loja%202024-21.xlsx&action=default&mobileredirect=true&wdOrigin=OUTLOOK-METAOS.FILEBROWSER.FILES-HOME" target="_blank">Web-Loja</a>
+        </div>
+
+        <div class="total-loja">
+          <a href="https://amer3-my.sharepoint.com/:x:/r/personal/3rd_gustavo_souza_americanas_io/_layouts/15/Doc.aspx?sourcedoc=%7B1EA210EB-84CA-44FA-89A6-AAFA0322288F%7D&file=Total%20Lojas%20-%2017.07.2024%202%20-%20adri%20(1).xlsm&action=default&mobileredirect=true&wdOrigin=OUTLOOK-METAOS.FILEBROWSER.FILES-HOME" target="_blank">Total-Loja</a>
+        </div>  
+      </div>
+    </header>
+      
+     
+
+  <nav id="navebar">
+    <div class="navegcao">
+      <ul class="list-navegacao">
+        <li class="item dropdown">
+          <a rel="float-shadow" class="button float-shadow">Acionamento</a>
+          <ul class="dropdown-content">
+            <li><a href="https://amer3-my.sharepoint.com/:x:/r/personal/ronald_filho_americanas_io/_layouts/15/Doc.aspx?sourcedoc=%7B9406F2A6-FB55-403B-B230-D6B2E3A03845%7D&file=Acionamento.xlsx&action=default&mobileredirect=true" target="_blank">Planilha Acionamento</a></li>            
+          </ul>
+        </li>
+        <li class="item dropdown">
+          <a rel="float-shadow" class="button float-shadow">Escalation</a>
+          <ul class="dropdown-content">
+            <li><a href="/dados/telecom-conhecimento/Escalation de Recuperação CONTROLE DE AÇÕES (1) (1).pdf" target="_blank">Escalation</a></li>            
+          </ul>
+        </li>
+        <li class="item dropdown">
+          <a rel="float-shadow" class="button float-shadow">Recursos Essenciais</a>
+          <ul class="dropdown-content">
+            <li><a href="http://nagioscore/telecom/nagios.php" target="_blank">Monitoramento</a></li>
+            <li><a href="http://nagioscore/nagios/" target="_blank">Nagios</a></li>
+            <li><a href="https://outlook.office.com/mail/ " target="_blank">E-mail</a></li>
+            <li><a href="https://americanas.freshservice.com/support/home?logged_out=true" target="_blank">FreshService</a></li>
+            <li><a href="https://apps.powerapps.com/play/e/default-e316d1ac-42c8-4d30-817c-12c7a71f8ab2/a/f44165d6-53a1-4180-9389-27016f4abdc0?tenantId=e316d1ac-42c8-4d30-817c-12c7a71f8ab2&hint=51d25150-f844-4bac-91ce-26c288bc6daf&sourcetime=1692827229571" target="_blank">Lojainfo</a></li>
+            <li><a href="https://n406.meraki.com/login/session_timeout?go=%2FLOJA-1417-applia%2Fn%2FDIaTibwg%2Fmanage%2Fnodes%2Fnew_wired_status" target="_blank">Meraki</a></li>
+            <li><a href="https://gestaointegrada.oi.net.br/#/!/" target="_blank">GIS</a></li>
+            <li><a href="https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html" target="_blank">GRC</a></li>
+            <li><a href="http://webloja/webloja" target="_blank">WebLoja</a></li>
+            <li><a href="http://monitorsortimento/lojas.php" target="_blank">Tipo de Loja</a></li>
+            <li><a href="https://orion.corp.americanas.io/Orion/SummaryView.aspx?ViewID=1" target="_blank">Orion</a></li>
+            <li><a href="http://teflasa.lasa.lojasamericanas.com.br/ctf/" target="_blank">CTF</a></li>
+            <li><a href="https://grafana-bee-prd.metaplane.cloud/d/hYLTJuLVz/ppm-lojas?orgId=1&refresh=30s&from=now-30m&to=now" target="_blank">Grafana</a></li>
+            <li><a href="https://rjucuccx01las.lasa.lojasamericanas.com.br:8445/desktop/container/?error=true" target="_blank">Cisco Ramal</a></li>          
+            <li><a href="http://citrixcloud.corp.americanas.io/Citrix/StoreWeb/" target="_blank">Citrix Americanas</a></li>          
+            <li><a href="http://citrixcloud.lasa.lojasamericanas.com.br/Citrix/LasaWeb/" target="_blank">Citrix Lasa</a></li>          
+            <li><a href="https://senha.americanas.io/" target="_blank">Reset de Senha</a></li>          
+            <li><a href="https://antares.seniorcloud.com.br/" target="_blank">Antharess</a></li>          
+          </ul>
+        </li>
+        <li class="item dropdown">
+          <a href="#" class="button float-shadow">Telecom Aprendizado</a>
+          <ul class="dropdown-content">
+            <li><a href="/dados/telecom-conhecimento/N1 - .pdf" target="_blank">N1 - Procedimento</a></li>
+            <li><a href="/dados/telecom-conhecimento/Recuperação de SDWAN com utilização do micro do GGL.pdf" target="_blank">Recuperação de SDWAN</a></li>
+            <li><a href="/dados/telecom-conhecimento/Como bypassar  o Citrix.pdf" target="_blank">Bypassar Citrix</a></li>
+            <li><a href="/dados/telecom-conhecimento/Topologias e equipamentos de rede nas lojas.pdf" target="_blank">Topologia de rede</a></li>
+          </ul>
+        </li>
+        <li class="item dropdown">
+          <a rel="float-shadow" class="button float-shadow">Instruções e Tutoriais</a>
+          <ul class="dropdown-content">
+              <li class="dropdown-header">Relógio de Ponto</li>
+              <li><a href="/dados/telecom-conhecimento/Ativação de Relogio 2.pdf" target="_blank">Ativação de Relógio de Ponto</a></li>
+              <li><a href="/dados/telecom-conhecimento/Atualização de Data e Hora do Relógio.pdf" target="_blank">Atualização de Relógio de Ponto</a></li>
+              <li><a href="/dados/procedimentos/Caminho Puxar marcação do relógio de ponto.pdf" target="_blank">Puxar Marcação do Relógio de Ponto e Cadastrar Associado</a></li>
+              <li><a href="/dados/procedimentos/Caminho  Com defeito ( concluido ).pdf" target="_blank">Análise e Tratamento de Chamados (Relógio de Ponto com Defeito)</a></li>
+              <li><a href="https://amer3-my.sharepoint.com/:w:/r/personal/3rd_gustavo_souza_americanas_io/_layouts/15/Doc.aspx?sourcedoc=%7B650c645e-8a80-4a3e-b29e-f3dd51a03f44%7D&action=editnew" target="_blank">Procedimentos-Relógio</a></li>
+              <li class="dropdown-header">Procedimentos técnicos</li>
+              <li><a href="/dados/procedimentos/PROCEDIMENTO DE CHECAGEM DO DNS NAS LOJAS AFETADAS.pdf" target="_blank">PROCEDIMENTO DE CHECAGEM DO DNS NAS LOJAS AFETADAS</a></li>
+              <li><a href="/dados/procedimentos/RETIRAR LOJA DA CONTIGENCIA - SDWAN.pdf" target="_blank">RETIRAR LOJA DA CONTIGENCIA - SDWAN</a></li>
+              
+              <li><a href="" target="_blank">Verificar</a></li>
+          </ul>          
+      </li>
+      <li class="item dropdown">
+          <a rel="float-shadow" class="button float-shadow">Escala-COT</a>
+          <ul class="dropdown-content">
+              <li class="dropdown-header">Escala</li>
+              <li><a href="https://amer3-my.sharepoint.com/:x:/r/personal/ronald_filho_americanas_io/_layouts/15/Doc.aspx?sourcedoc=%7BF17165C5-9E39-4B85-B266-62FF9607D2E4%7D&file=Ferias.xlsx&action=default&mobileredirect=true&wdOrigin=OFFICE-OFFICE-METAOS.FILEBROWSER.FILES-PEOPLEL2-FOLDER" target="_blank">Férias</a></li>
+              <li><a href="https://amer3-my.sharepoint.com/:x:/r/personal/ronald_filho_americanas_io/_layouts/15/Doc.aspx?sourcedoc=%7B12EA015E-9E51-432E-B3BA-0480E5B01998%7D&file=EscalaCOT.xlsx&action=default&mobileredirect=true&wdOrigin=OFFICE-OFFICE-METAOS.FILEBROWSER.FILES-PEOPLEL2-FOLDER" target="_blank">Escala-COT</a></li>
+          </ul>          
+      </li>
+      
+
+      </ul>
+    </div>
+  </nav> 
+
+
+  <section id="conteudo">
+    <div id="searchResults" style="display:none;">
+      <h2>Resultados da Pesquisa:</h2>
+      <ul id="resultsList"></ul>
+    </div>   
+  </section>
+  
+  <main class="container">   
+    
+
+    <section id="procedimentos">
+      <div class="procedimentos">
+          <h1>Procedimentos e Contatos Importantes</h1>
+  
+          <!-- Financeiro -->
+          <div class="categoria" onclick="toggleDetails('financeiro')">Acionamentos</div>
+          <div id="financeiro" class="detalhes">
+              <div class="subcategoria" onclick="toggleDetails('auttar')">AUTTAR</div>
+              <div id="auttar" class="detalhes">
+                  <p><strong>Responsável:</strong> Andre Gonçalves<br><strong>Tipo:</strong> Débito e Credido</p>
+              </div>
+              <div class="subcategoria" onclick="toggleDetails('delfia')">DELFIA</div>
+              <div id="delfia" class="detalhes">
+                  <p><strong>Coordenação:</strong> Walter<br><strong>Responsável:</strong> Ana Gerente</p>
+              </div>
+              <div class="subcategoria" onclick="toggleDetails('hydra')">HYDRA</div>
+              <div id="hydra" class="detalhes">
+                <p><strong>Coordenação:</strong> Ivor do Nascimento</p>
+              </div>
+          </div>
+  
+          <!-- Equipamentos -->
+          <div class="categoria" onclick="toggleDetails('equipamentos')">Equipamentos</div>
+          <div id="equipamentos" class="detalhes">
+              <div class="subcategoria" onclick="toggleDetails('notebook')">REPARO DE NOTEBOOK</div>
+              <div id="notebook" class="detalhes">
+                  <p><strong>Localização:</strong> CD e Sede<br><strong>Suporte Local:</strong> Deyse de Paula => Ana</p>
+              </div>
+              <div class="subcategoria" onclick="toggleDetails('monitor')">Solicitação de Monitor - OBSERVAÇÃO => Americanas</div>
+              <div id="monitor" class="detalhes">
+                  <p><strong>Importante:</strong> NÃO É PARA PASSAR PARA LOJA!<br><strong>Caminho:</strong> Gestão de Ativos => Escolher => Sylvia Perez</p>
+              </div>
+          </div>
+  
+          <!-- Sistemas -->
+          <div class="categoria" onclick="toggleDetails('sistemas')">Sistemas</div>
+          <div id="sistemas" class="detalhes">              
+              <div class="subcategoria" onclick="toggleDetails('lookerstudio')">Acesso ao LookerStudio(POWER BI GOOGLE)</div>
+              <div id="lookerstudio" class="detalhes">
+                  <p><strong>Ação:</strong> Criar Identidade Google Corporativa</p>
+              </div>
+              <div class="subcategoria" onclick="toggleDetails('diversos')">Acesso a Diversos Sistemas de Loja</div>
+              <div id="diversos" class="detalhes">
+                  <p><strong>Sistemas:</strong> Maestro, Webloja, CTF, etc.<br><strong>Caminho:</strong> Suporte do sistema de loja</p>
+              </div>
+              <div class="subcategoria" onclick="toggleDetails('office')">Acesso para Baixar o Office</div>
+              <div id="office" class="detalhes">
+                  <p><strong>Caminho:</strong> Acesso via e-mail corporativo para licenciamento E3</p>
+              </div>
+          </div>
+  
+          <!-- Operacional -->
+          <div class="categoria" onclick="toggleDetails('operacional')">Operacional</div>
+          <div id="operacional" class="detalhes">
+              <div class="subcategoria" onclick="toggleDetails('prestadores')">Prestadores de Serviço  </div>
+              <div id="prestadores" class="detalhes">
+                  <p><strong>Caminho:</strong> Gestão de Acesso<br><strong>Tipo de Serviço:</strong> Ver opções disponíveis</p>
+              </div>
+              <div class="subcategoria" onclick="toggleDetails('mudou')">Comunicação de Mudança de Loja do Colaborador</div>
+              <div id="mudou" class="detalhes">
+                  <p><strong>Caminho:</strong> Suporte a Sistemas de Loja > Webloja
+                    tipo de serviço > ALTERAÇÃO PERFIL/LOJA</p>
+                  <p><strong>Observação:</strong> Por Favor preencher da forma correta como solicitado no formulário, pedir na descrição a mudança dos outros acessos, assim como informar de qual loja está SAINDO para CHEGANDO</p>
+              </div>
+          </div>
+  
+          <!-- Manutenção -->
+          <div class="categoria" onclick="toggleDetails('manutencao')">Manutenção</div>
+          <div id="manutencao" class="detalhes">
+              <div class="subcategoria" onclick="toggleDetails('pdv-reinicializacao')">Reinicialização do PDV</div>
+              <div id="pdv-reinicializacao" class="detalhes">
+                  <p><strong>Descrição:</strong> Reinicializações inesperadas no PDV.<br><strong>Soluções:</strong></p>
+                  <ul>
+                      <li>Verificação da fonte de alimentação</li>
+                      <li>Troca de periféricos</li>
+                      <li>Atualizações pendentes</li>
+                      <li>Abertura de chamado técnico</li>
+                  </ul>
+                  <p><strong>Observação:</strong> Monitore o comportamento após cada intervenção.</p>
+              </div>
+          </div>
+  
+          <!-- Procedimento Novo -->
+          <div class="categoria" onclick="toggleDetails('novo-procedimento')">Procedimentos Novos</div>
+          <div id="novo-procedimento" class="detalhes">
+              <div class="subcategoria" onclick="toggleDetails('chamado-sac')">Abrir Chamado no SAC</div>
+              <div id="chamado-sac" class="detalhes">
+                  <p><strong>Descrição:</strong> Para lojas sem acesso ao sistema SAC.</p>
+                  <p><strong>Passos:</strong></p>
+                  <ul>
+                      <li>Verificar indisponibilidade do sistema.</li>
+                      <li>Enviar e-mail para <strong>infra.corporativa.n3.so@americanas.io</strong>:</li>
+                      <ul>
+                          <li><strong>Assunto:</strong> Solicitação de acesso ao SAC</li>
+                          <li><strong>Corpo:</strong> Informar nome e código da loja, motivo, e solicitação.</li>
+                      </ul>
+                  </ul>
+                  <p><strong>Responsável:</strong> Equipe de Infraestrutura Corporativa (N3)</p>
+              </div>
+          </div>
+
+          <div class="categoria" onclick="toggleDetails('erro-solucao')">Erros e Soluções de Acesso ao Micro</div>
+          <div id="erro-solucao" class="detalhes">
+              <div class="subcategoria" onclick="toggleDetails('senha-usuario-invalido')">Senha ou Usuário inválido</div>
+              <div id="senha-usuario-invalido" class="detalhes">         
+                  <p><strong>Descrição:</strong> O usuário não consegue acessar o micro devido a informações de login inválidas.</p>
+                  <p><strong>Solução:</strong></p>
+                  <ul>
+                      <li><strong>Passo 1:</strong> Abrir um chamado para resetar a senha.</li>
+                      <li><strong>Fila:</strong> COT</li>
+                      <li><strong>Nota:</strong> Existe uma automação que reseta a senha.</li>
+                      <li><strong>Link para Chamado:</strong> <a href="https://americanas.freshservice.com/support/catalog/items/907" target="_blank">Reset de Senha</a></li>
+                  </ul>                  
+              </div> 
+
+
+              <div class="subcategoria" onclick="toggleDetails('Falha de Confiança')">Falha de Confiança na Estação com o Controlador de Domínio</div>
+              <div id="Falha de Confiança" class="detalhes">         
+                  <p><strong>Descrição:</strong> A máquina perdeu a configuração com o domínio LASA, resultando em falha de confiança.</p>
+                  <li><strong>Passo 1:</strong> Orientar a loja a abrir um chamado para a Delfia.</li>
+                  <li><strong>Passo 2:</strong> Solicitar a recolocação da máquina no domínio LASA.</li>
+                  <p><strong>Link para Chamado:</strong> <a href="https://americanas.freshservice.com/support/catalog/items/1036" target="_blank">Recolocação no Domínio LASA</a></p>               
+              </div>   
+
+              <div class="subcategoria" onclick="toggleDetails('Falha ao Carregar o Perfil')">Falha ao Carregar o Perfil</div>
+              <div id="Falha ao Carregar o Perfil" class="detalhes">         
+                  <p><strong>Descrição:</strong> Ocorre raramente e é diferente do erro acima. Esse problema acontece quando o perfil do usuário na máquina local fica corrompido.</p>
+                  <li><strong>Passo 1:</strong> Orientar a loja a abrir um chamado para a Delfia.</li>
+                  <li><strong>Passo 2:</strong> Solicitar a verificação do problema no perfil do usuário.</li>
+                  <p><strong>Link para Chamado:</strong> <a href="https://americanas.freshservice.com/support/catalog/items/1036" target="_blank">Verificação de Perfil Corrompido</a></p>               
+              </div>   
+          </div>
+          
+  </section>
+              
+ 
+    <section> 
+      <h1>Grupos de Acesso - LASA</h1>
+      <table id="groupTable" border="1" style="width:100%; text-align:left;">
+          <thead>
+              <tr>
+                  <th>Nome do Grupo</th>
+                  <th>Descrição</th>
+                  <th>Observações</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Dados serão preenchidos dinamicamente -->
+          </tbody>
+      </table>
+    </section>
+
+    <h1>Avisos</h1>
+    <input type="text" id="avisoInput" placeholder="Digite um aviso">
+    <button onclick="adicionarAviso()">Adicionar Aviso</button>
+    <ul id="listaAvisos"></ul>
+
+    
+</main>
+
+  
+  
+  
+  <footer>
+    <img src="/img/wave.svg" alt="">
+    <div id="footer_items">
+      <span id="copyright">
+        &copy 2024 Gustavo Codeço
+      </span>
+      <div class="social_media_buttons">
+        <a href="">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script> 
+  (function() {
+    var requestAnimationFrame = 
+        window.requestAnimationFrame || 
+        window.mozRequestAnimationFrame || 
+        window.webkitRequestAnimationFrame || 
+        window.msRequestAnimationFrame ||
+        function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+    window.requestAnimationFrame = requestAnimationFrame;
+})();
+
+var flakes = [],
+    canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d"),
+    flakeCount = 100,
+    mX = -100,
+    mY = -100;
+
+// Atualiza o tamanho do canvas para coincidir com o header
+function resizeCanvas() {
+    var header = document.querySelector("header");
+    canvas.width = header.offsetWidth;
+    canvas.height = header.offsetHeight;
+}
+
+// Inicializa os flocos de neve
+function init() {
+    for (var i = 0; i < flakeCount; i++) {
+        var x = Math.floor(Math.random() * canvas.width),
+            y = Math.floor(Math.random() * canvas.height),
+            size = (Math.random() * 3) + 2,
+            speed = (Math.random() * 1) + 0.5,
+            opacity = (Math.random() * 0.5) + 0.3;
+
+        flakes.push({
+            speed: speed,
+            velY: speed,
+            velX: 0,
+            x: x,
+            y: y,
+            size: size,
+            stepSize: (Math.random()) / 30,
+            step: 0,
+            opacity: opacity
+        });
+    }
+
+    snow();
+}
+
+// Anima os flocos de neve
+function snow() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (var i = 0; i < flakeCount; i++) {
+        var flake = flakes[i];
+
+        // Movimento dos flocos
+        flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
+        flake.y += flake.velY;
+        flake.x += flake.velX;
+
+        // Reinicia o floco se sair do canvas
+        if (flake.y >= canvas.height || flake.x >= canvas.width || flake.x <= 0) {
+            reset(flake);
+        }
+
+        ctx.fillStyle = "rgba(255,255,255," + flake.opacity + ")";
+        ctx.beginPath();
+        ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+    requestAnimationFrame(snow);
+}
+
+// Reinicia um floco de neve
+function reset(flake) {
+    flake.x = Math.floor(Math.random() * canvas.width);
+    flake.y = 0;
+    flake.size = (Math.random() * 3) + 2;
+    flake.speed = (Math.random() * 1) + 0.5;
+    flake.velY = flake.speed;
+    flake.velX = 0;
+    flake.opacity = (Math.random() * 0.5) + 0.3;
+}
+
+// Redimensiona o canvas ao alterar o tamanho da janela
+window.addEventListener("resize", resizeCanvas);
+
+// Detecta o movimento do mouse
+window.addEventListener("mousemove", function(e) {
+    mX = e.clientX;
+    mY = e.clientY;
+});
+
+// Inicia o efeito de neve
+resizeCanvas();
+init();
+
+
+
+
+
+ // Dados em formato JSON
+ const grupos = [
+            { nome: "ADMINREDE-N2", descricao: "Grupo de administradores de estações LASA", observacoes: "" },
+            { nome: "ADMINREDE-N3", descricao: "Grupo de administradores do domínio LASA", observacoes: "" },
+            { nome: "GG_Citrix_Cloud_Hyperion_Azure", descricao: "Liberação de acesso ao Citrix Hyperion", observacoes: "" },
+            { nome: "GG_Citrix_Cloud_Producao_Azure", descricao: "Liberação de acesso ao Citrix Produção", observacoes: "" },
+            { nome: "APP-QUIOSQUE-PROMOTORA", descricao: "Grupo vinculado à GPO para controle da utilização dos computadores do Quiosque Financeiro", observacoes: "GPO - BLOQ-QuisoqueFinance" },
+            { nome: "GL_Lock_USB", descricao: "Grupo responsável pelo bloqueio de dispositivos USB", observacoes: "" }
+        ];
+
+        // Preenchendo a tabela dinamicamente
+        const tableBody = document.querySelector("#groupTable tbody");
+        grupos.forEach(grupo => {
+            const row = `
+                <tr>
+                    <td>${grupo.nome}</td>
+                    <td>${grupo.descricao}</td>
+                    <td>${grupo.observacoes || "Nenhuma"}</td>
+                </tr>
+            `;
+            tableBody.innerHTML += row;
+        });
+
+
+//lista de procedimentos
+function toggleDetails(id) {
+    const detalhes = document.getElementById(id);
+    if (detalhes.style.display === "block") {
+        detalhes.style.display = "none"; // Oculta os detalhes
+    } else {
+        detalhes.style.display = "block"; // Exibe os detalhes
+    }
+}
+
+
+
+
+    // Variável global para armazenar os documentos
+    let documents = [];
+    
+    // Carrega o conteúdo do arquivo JSON
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch('/dados/conteudo.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Erro ao carregar o JSON: ${response.statusText}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          documents = data;
+          console.log("Documentos carregados:", documents);
+        })
+        .catch(error => console.error("Erro ao carregar o JSON:", error));
+    });
+    
+    // Função de busca
+    function search() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const resultsList = document.getElementById('resultsList');
+      const searchResults = document.getElementById('searchResults');
+    
+      // Limpa resultados anteriores
+      resultsList.innerHTML = "";
+    
+      // Valida se `documents` está carregado e não vazio
+      if (!Array.isArray(documents) || documents.length === 0) {
+        console.error("O array 'documents' está vazio ou inválido.");
+        searchResults.style.display = "block";
+        resultsList.innerHTML = "<li>Erro: Documentos não carregados ou inválidos.</li>";
+        return false;
+      }
+    
+      // Filtra os documentos válidos e correspondentes à busca no JSON
+      const filteredDocs = documents
+        .filter(doc => doc && typeof doc.title === 'string') // Garante que o objeto e a propriedade 'title' existem e são strings
+        .filter(doc => doc.title.toLowerCase().includes(query)); // Verifica a correspondência da busca
+    
+      // Pesquisa no conteúdo HTML (títulos, links e parágrafos)
+      const htmlResults = [];
+      const elementsToSearch = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, a');
+    
+      elementsToSearch.forEach(element => {
+        if (element.textContent.toLowerCase().includes(query)) {
+          htmlResults.push({
+            title: element.textContent.trim(),
+            link: element.tagName === 'A' ? element.href : '#'  // Links terão seu href, outros elementos terão '#'
+          });
+        }
+      });
+    
+      // Combina resultados de JSON e HTML
+      const allResults = [...filteredDocs, ...htmlResults];
+    
+      // Exibe os resultados
+      if (allResults.length > 0) {
+        searchResults.style.display = "block";
+        allResults.forEach(result => {
+          const listItem = document.createElement('li');
+          listItem.innerHTML = `<a href="${result.link}" target="_blank">${result.title}</a>`;
+          resultsList.appendChild(listItem);
+        });
+      } else {
+        searchResults.style.display = "block";
+        resultsList.innerHTML = "<li>Nenhum resultado encontrado.</li>";
+      }
+    
+      return false; // Impede o recarregamento da página
+    }
+    
+    // Dropdown Hover
+    const dropdownItems = document.querySelectorAll('.item.dropdown');
+    
+    dropdownItems.forEach(item => {
+        let timeout;
+    
+        item.addEventListener('mouseenter', () => {
+            clearTimeout(timeout); // Cancela o timeout se o mouse entrar
+            const dropdownContent = item.querySelector('.dropdown-content');
+            dropdownContent.style.display = 'block'; // Mostra o dropdown
+            dropdownContent.style.opacity = '1'; // Torna visível
+            dropdownContent.style.visibility = 'visible'; // Torna visível
+        });
+    
+        item.addEventListener('mouseleave', () => {
+            const dropdownContent = item.querySelector('.dropdown-content');
+            timeout = setTimeout(() => {
+                dropdownContent.style.opacity = '0'; // Torna invisível
+                dropdownContent.style.visibility = 'hidden'; // Esconde
+                dropdownContent.style.display = 'none'; // Remove o espaço
+            }, 300); // Ajuste o tempo conforme necessário
+        });
+    
+        item.querySelector('.dropdown-content').addEventListener('mouseenter', () => {
+            clearTimeout(timeout); // Cancela o timeout se o mouse entrar no dropdown
+        });
+    
+        item.querySelector('.dropdown-content').addEventListener('mouseleave', () => {
+            const dropdownContent = item.querySelector('.dropdown-content');
+            timeout = setTimeout(() => {
+                dropdownContent.style.opacity = '0'; // Torna invisível
+                dropdownContent.style.visibility = 'hidden'; // Esconde
+                dropdownContent.style.display = 'none'; // Remove o espaço
+            }, 300); // Ajuste o tempo conforme necessário
+        });
+    });
+    
+
+    
+  
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Estilos para o container principal do main */
+main {
+  display: flex; /* Usar Flexbox para o layout */
+  justify-content: flex-start; /* Espaçamento entre os itens */
+  align-items: flex-start; /* Alinhar itens no topo */
+  padding: 20px; /* Padding interno do main */
+  gap: 20px; /* Espaçamento entre as seções */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas menores */
+}
+
+/* Estilo para a seção de procedimentos */
+#procedimento {
+  flex: 2; /* Permitir que essa seção cresça mais que a anterior */
+  max-width: 600px; /* Largura máxima para a seção de procedimentos */
+  padding: 20px; /* Padding interno */
+  border: 1px solid #ccc; /* Bordas para distinguir a seção */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #fff; /* Cor de fundo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionar sombra para destacar */
+}
+
+/* Estilos adicionais para títulos e parágrafos */
+h2,
+h1,
+h3 {
+  color: #333; /* Cor do texto dos títulos */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  font-family: "Lato", sans-serif; /* Estilo de fonte */
+  font-size: 2.5rem;
+  margin-top: -19px;
+}
+
+p {
+  margin: 10px 0; /* Margem vertical para os parágrafos */
+  line-height: 1.5; /* Melhor espaçamento entre linhas */
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* Empilhar elementos verticalmente em telas menores */
+    align-items: stretch; /* Esticar itens para ocupar a largura total */
+    gap: 15px; /* Reduzir o espaçamento entre as seções */
+  }
+
+  #painel-de-avisos {
+    max-width: 100%; /* Ocupar toda a largura */
+    margin-right: 0; /* Remover margem direita */
+    margin-bottom: 20px; /* Adicionar espaço abaixo do painel */
+  }
+
+  #procedimento {
+    max-width: 100%; /* Ocupar toda a largura */
+    flex: none; /* Resetar o flex para largura total */
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  main {
+    padding: 10px; /* Reduzir o padding geral */
+  }
+
+  #painel-de-avisos,
+  #procedimento {
+    padding: 10px; /* Reduzir o padding interno das seções */
+  }
+
+  h2,
+  h1,
+  h3 {
+    font-size: 1.2rem; /* Reduzir tamanho dos títulos */
+  }
+
+  p {
+    font-size: 0.9rem; /* Reduzir tamanho dos parágrafos */
+  }
+}

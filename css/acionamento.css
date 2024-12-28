@@ -1,0 +1,133 @@
+ /* Centraliza o título de forma responsiva */
+/* Destacar o título */
+#title-acionamento {
+    width: 100%;
+    max-width: 450px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto; /* Centraliza com espaçamento superior */
+    background: linear-gradient(90deg, #BD0034, #DA0033); /* Gradiente suave */
+    color: white; /* Contraste com o fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-weight: bold;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    font-size: 2rem; /* Aumenta o tamanho do texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações */
+}
+
+/* Efeito de hover no título */
+#title-acionamento:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Realce da sombra */
+}
+
+/* Estilo adicional para o texto */
+.title-acionamento {
+    font-size: clamp(1.8rem, 3vw, 2.2rem); /* Fonte responsiva */
+    text-align: center;
+}
+
+/* Estilo da tabela */
+table {
+    width: 40%; /* Reduzir a largura da tabela para 40% */
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+    font-family: Arial, sans-serif;
+    color: #333; /* Cor do texto */
+    background-color: #ffffff; /* Cor de fundo padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Suporte às bordas arredondadas */
+    box-shadow: none; /* Remove a sombra para uma aparência mais limpa */
+}
+/* Cabeçalho com destaque */
+th {
+    padding: 4px; /* Reduz o espaçamento para células */
+    text-align: center;
+    border: 1px solid #ccc; /* Bordas suaves */
+    font-size: 0.8rem; /* Tamanho da fonte menor */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animações */
+}
+
+/* Linhas ímpares com cor diferente */
+tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Cor suave */
+}
+
+/* Linhas pares com cor diferenciada */
+tr:nth-child(even) {
+    background-color: #e8f5e9; /* Verde claro */
+}
+
+/* Células de dados */
+td {
+    padding: 8px; /* Menor espaçamento para telas pequenas */
+    text-align: center;
+    border: 1px solid #ccc; /* Bordas suaves */
+    font-size: 0.9rem; /* Redução do tamanho da fonte */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animações */
+}
+
+/* Efeito ao passar o mouse */
+tr:hover {
+    background-color: #c8e6c9; /* Verde mais intenso */
+    transform: scale(1.01); /* Leve aumento */
+}
+
+/* Bordas arredondadas (caso seja necessário em navegadores antigos) */
+td:first-child, th:first-child {
+    border-left: none;
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+/* Esconde os resultados de busca inicialmente */
+.searchResults {
+    display: none;
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+    #title-acionamento {
+        font-size: 1.5rem; /* Reduz tamanho da fonte */
+        height: auto; /* Ajusta altura para texto maior */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    table {
+        width: 100%; /* Tabela ocupa toda a largura */
+        margin: 10px auto;
+        font-size: 0.9rem; /* Reduz tamanho da fonte */
+    }
+
+    th, td {
+        padding: 6px; /* Reduz espaçamento interno */
+        font-size: 0.8rem; /* Texto menor */
+    }
+
+    td {
+        word-break: break-word; /* Quebra linhas longas */
+    }
+}
+
+@media (max-width: 480px) {
+    #title-acionamento {
+        font-size: 1.2rem; /* Reduz ainda mais o tamanho da fonte */
+        padding: 15px;
+    }
+
+    table {
+        font-size: 0.8rem; /* Texto menor para telas muito pequenas */
+    }
+
+    th, td {
+        padding: 4px; /* Reduz mais o espaçamento */
+    }
+}

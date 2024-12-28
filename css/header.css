@@ -1,0 +1,260 @@
+/* Geral */
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa; /* Fundo leve para contraste */
+  color: #333;
+}
+
+header {
+  background: #f80032;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+  height: 300px; /* Defina a altura desejada */
+}
+
+header h1,
+header p {
+  margin: 0;
+  margin-left: 5%;
+}
+
+header input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px; /* Defina a largura desejada */
+  height: 40px;
+}
+
+header button:hover {
+  background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+header form {
+  margin-top: 1rem;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block; /* Permite que o ícone e o input sejam tratados como bloco */
+}
+
+#search {
+  margin-left: 30%;
+  position: relative;
+}
+
+#searchInput {
+  padding-left: 30px; /* Espaço à esquerda para o ícone */
+  padding-right: 10px; /* Espaço à direita para o botão */
+  max-width: 100%; /* Responsividade do input */
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px; /* Distância da esquerda */
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  pointer-events: none; /* Ignora cliques no ícone */
+  color: black;
+}
+
+.base-conhecimento {
+  display: flex;
+  flex-direction: column;
+}
+
+.base-conhecimento h1 {
+  font-weight: 900;
+  font-size: 3em;
+  color: #fff;
+}
+
+.base-conhecimento p {
+  text-align: left;
+}
+
+button {
+  margin: 20px;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn-10 {
+  background: linear-gradient(
+    0deg,
+    var(--color-neutral-0) 0%,
+    var(--color-neutral-0) 100%
+  );
+  color: #000;
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-10:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  transform: scale(0.1);
+  background: linear-gradient(
+    0deg,
+    rgba(240, 248, 255) 0%,
+    rgba(248, 248, 255) 100%
+  );
+}
+
+.btn-10:hover {
+  color: #fff;
+  border: none;
+  background: transparent;
+}
+
+.btn-10:hover:after {
+  transform: scale(1);
+}
+
+.float-shadow {
+  display: inline-block;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.float-shadow:hover {
+  transform: translateY(-5px);
+}
+
+.float-shadow:hover:before {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+/* Estilo do Main */
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#procedimento {
+  flex: 2;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Estilos Adicionais para Títulos e Parágrafos */
+h2,
+h1,
+h3 {
+  color: #333;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Media query para responsividade */
+@media screen and (max-width: 600px) {
+  header form {
+    margin-top: 0rem;
+    display: ruby-text;
+    position: relative;
+    margin-top: 30%;
+    margin-left: -40%;
+  }
+  header {
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: 300px; /* Defina a altura desejada */
+  }
+
+  header input[type="text"] {
+    width: 100%; /* Largura total em dispositivos móveis */
+    margin-bottom: 1rem; /* Espaçamento abaixo do input */
+    padding: 0.5rem; /* Padding consistente */
+  }
+
+  header h1 {
+    font-size: 2em; /* Ajusta o tamanho do título */
+    margin-left: 0; /* Remove margem esquerda */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .custom-btn {
+    width: 50%; /* Largura total para botões em dispositivos móveis */
+  }
+
+  #search {
+    margin-left: -95%; /* Remove margem esquerda */
+    width: 50%; /* Largura total para o container de busca */
+    text-align: center; /* Centraliza os textos */
+    margin-top: 50%;
+  }
+
+  .input-container {
+    width: 100%; /* Largura total para o container do input */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

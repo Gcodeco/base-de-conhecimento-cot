@@ -1,0 +1,82 @@
+/* Estilizando a seção de conteúdo */
+#conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  padding: 20px; /* Adiciona espaço interno */
+  background-color: #ffffff; /* Fundo branco para a seção principal */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+/* Estilizando os resultados da pesquisa */
+#searchResults {
+  margin-top: 20px; /* Espaçamento acima dos resultados */
+  width: 100%;
+  max-width: 600px; /* Largura máxima para evitar muito espaçamento */
+  background-color: #ffffff; /* Fundo branco para os resultados */
+  border-radius: 8px; /* Cantos arredondados */
+  padding: 15px; /* Espaçamento interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave para destacar a seção */
+}
+
+/* Estilo do título */
+#searchResults h2 {
+  color: #c8102e; /* Cor vermelha das Lojas Americanas */
+  font-size: 24px; /* Tamanho da fonte */
+  margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Estilizando a lista de resultados */
+#resultsList {
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding: 0; /* Remove o padding padrão */
+}
+
+#resultsList li {
+  background-color: #f8f8f8; /* Fundo suave para os itens da lista */
+  border: 1px solid #e0e0e0; /* Borda leve */
+  border-radius: 5px; /* Cantos arredondados */
+  padding: 15px; /* Espaçamento interno */
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+  transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+/* Efeito hover nos itens da lista */
+#resultsList li:hover {
+  background-color: #ffe4e1; /* Fundo levemente rosa no hover */
+}
+
+/* Estilo do link */
+#resultsList li a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #007bff; /* Cor do link (azul) */
+  font-weight: bold; /* Texto em negrito */
+}
+
+#resultsList li a:hover {
+  text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+  #conteudo {
+    padding: 10px; /* Reduz o padding em telas menores */
+  }
+
+  #searchResults {
+    padding: 10px; /* Reduz o padding nos resultados */
+  }
+
+  #searchResults h2 {
+    font-size: 20px; /* Tamanho da fonte do título reduzido */
+  }
+
+  #resultsList li {
+    padding: 10px; /* Reduz o padding dos itens da lista */
+  }
+
+  #resultsList li a {
+    font-size: 14px; /* Tamanho da fonte dos links reduzido */
+  }
+}

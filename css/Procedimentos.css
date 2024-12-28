@@ -1,0 +1,157 @@
+/* Container principal para organizar a seção de procedimentos e o painel de avisos lado a lado */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1900px;
+  margin: auto;
+  padding: 20px;
+  display: flex; /* Adicionado para layout flexível */
+}
+
+/* Estilo para a seção de procedimentos e o painel de avisos */
+.procedimentos,
+.aviso-container {
+  flex: 0 1 45%; /* Permitir que cada seção cresça e ocupe 45% do espaço */
+  max-width: 400px; /* Largura máxima para evitar que fique muito larga */
+  padding: 10px; /* Padding interno reduzido */
+  border: 1px solid #ccc; /* Bordas para distinguir as seções */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #f9f9f9; /* Cor de fundo padrão */
+  margin-right: 10px; /* Espaço entre as seções */
+  position: relative; /* Para posicionamento de elementos filhos */
+}
+
+/* Ajuste específico para o fundo do painel de avisos */
+.aviso-container {
+  background-color: #fff; /* Cor de fundo diferente */
+}
+
+.procedimentos h1 {
+  font-size: 1.3rem;
+  margin: 5px;
+}
+
+/* Estilos adicionais para o texto */
+h1,
+h2,
+h3 {
+  color: #333; /* Cor do texto dos títulos */
+  font-size: 1.1rem; /* Tamanho da fonte dos títulos reduzido */
+  margin-bottom: 8px; /* Margem inferior para os títulos */
+  align-items: center;
+}
+
+/* Efeito de hover nas subclasses */
+
+.procedimentos h2:hover,
+.procedimentos h3:hover,
+.procedimentos .categoria:hover {
+  background-color: #d50000; /* Cor de fundo ao passar o mouse (vermelho Lojas Americanas) */
+  color: white; /* Mudança de cor do texto para branco para melhor contraste */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+p {
+  margin: 4px 0; /* Margem vertical reduzida para os parágrafos */
+  font-size: 0.9rem; /* Tamanho da fonte dos parágrafos reduzido */
+}
+
+/* Estilo para as categorias clicáveis */
+.categoria {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 10px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para as subcategorias */
+.subcategoria {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 8px 0; /* Margem superior e inferior */
+  padding: 8px; /* Padding interno */
+  background: #cce5ff; /* Cor de fundo para subcategorias (azul claro) */
+  border: 1px solid #99ccff; /* Borda com um tom mais escuro do azul */
+  border-radius: 4px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover nas subcategorias */
+.subcategoria:hover {
+  background-color: #b3d7ff; /* Cor de fundo ao passar o mouse (azul um pouco mais escuro) */
+}
+
+/* Estilo para os detalhes */
+.detalhes {
+  display: none;
+  padding: 10px;
+  margin: 5px 0;
+  background: #e9e9e9;
+  border-left: 3px solid #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transição suave ao abrir/fechar detalhes */
+}
+
+/* Removendo os pontos das listas */
+ul,
+ol {
+  list-style-type: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o padding padrão */
+}
+
+.aviso-actions input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.aviso-actions button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.aviso-actions button:hover {
+  background: #0056b3;
+}
+
+/* Ajustes no painel de avisos para compactar ainda mais */
+.aviso-container h2 {
+  font-size: 1.4rem; /* Reduzir o tamanho do título no painel de avisos */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Mudar para coluna em telas pequenas */
+    align-items: stretch; /* Esticar os itens */
+  }
+
+  .procedimentos,
+  .aviso-container {
+    max-width: 100%; /* Permitir que ocupem toda a largura em telas pequenas */
+    margin-right: 0; /* Remover margem direita */
+    margin-bottom: 10px; /* Espaço entre os elementos em telas pequenas */
+    z-index: 1;
+  }
+
+  .procedimentos {
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: 200px; /* Aumente de 10px para 20px ou outro valor desejado */
+    z-index: 1;
+  }
+}

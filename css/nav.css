@@ -1,0 +1,155 @@
+/* Estilo geral do navbar */
+#navebar {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.navegcao {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço */
+  transition: max-height 0.3s ease; /* Adiciona transição ao alternar visibilidade */
+}
+
+/* Lista de navegação */
+.list-navegacao {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Itens do menu */
+.item {
+  position: relative;
+  color: #555555;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover dos itens */
+.item:hover a {
+  color: #f9004d; /* Texto vermelho */
+  z-index: 1000;
+}
+
+/* Estilo do dropdown */
+.dropdown-content {
+  display: none; /* Escondido por padrão */
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 5px;
+  padding: 10px 0;
+  min-width: 150px;
+  max-height: 0; /* Altura inicial zero */
+  overflow: auto; /* Esconde o conteúdo ao início */
+  opacity: 0; /* Invisível inicialmente */
+  visibility: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+/* Mostrar o dropdown ao passar o mouse */
+.item.dropdown:hover .dropdown-content {
+  display: block; /* Faz o dropdown ocupar espaço */
+  max-height: 300px; /* Define altura máxima ao abrir */
+  opacity: 1; /* Torna visível */
+  visibility: visible; /* Exibe o dropdown */
+  z-index: 1000;
+}
+
+/* Itens do dropdown */
+.dropdown-content li {
+  list-style: none;
+  padding: 5px; /* Espaçamento interno */
+  border-bottom: 1px solid #f0f0f0; /* Linha separadora entre itens */
+  z-index: 1000;
+}
+.dropdown-content li:last-child {
+  border-bottom: none; /* Remove a linha no último item */
+  z-index: 1000;
+}
+
+.dropdown-content li a {
+  padding: 10px 15px;
+  color: #555;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: block; /* Torna o link clicável em toda a área */
+  z-index: 1000;
+}
+
+/* Hover nos itens do dropdown */
+.dropdown-content li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #f9004d;
+  z-index: 1000;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navegcao {
+    flex-direction: column; /* Altera para coluna em telas menores */
+    align-items: flex-start; /* Alinha itens à esquerda */
+  }
+
+  .list-navegacao {
+    flex-direction: column; /* Torna a lista de navegação em coluna */
+    gap: 10px; /* Reduz o espaço entre os itens */
+    z-index: 1000; /* Garante que a lista fique acima de outros elementos */
+  }
+
+  .dropdown-content {
+    width: 90%; /* Ocupa quase toda a largura em telas menores */
+    max-height: 200px; /* Altura reduzida para dispositivos móveis */
+    overflow-y: auto; /* Adiciona rolagem vertical quando o conteúdo excede a altura */
+    background-color: white; /* Define a cor de fundo para melhor visibilidade */
+    position: absolute; /* Usa posição absoluta para que a lista flutue sobre outros elementos */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    border: 1px solid #ccc; /* Borda para definir o contorno da lista */
+    border-radius: 5px; /* Borda arredondada */
+    display: none; /* Escondido por padrão */
+    z-index: 1000;
+  }
+
+  /* Estilo do botão para abrir o menu (se houver) */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: #f9004d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Mostrar o dropdown ao clicar (adicionando classe) */
+  .dropdown-active .dropdown-content {
+    display: block; /* Mostra o dropdown quando a classe ativa é adicionada */
+  }
+}

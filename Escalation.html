@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Conhecimento</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/acionamento.css">
+</head>
+<body>
+  <header>
+    <div class="base-conhecimento">
+      <h1>Base de Conhecimento</h1>
+      <p>Encontre rapidamente as informações necessárias para aprimorar sua produtividade.</p>
+    </div>
+
+    <div id="search">
+      <div class="search">
+        <form id="searchForm" action="#" method="get" onsubmit="return search();">
+          <div class="input-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Digite sua pesquisa" required>
+          </div>
+          <button class="custom-btn btn-10" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="home">
+      <a href="index.html" class="home-icon" title="Página Inicial">
+          <i class="fas fa-home"></i>
+      </a>
+      </div>
+  </header>
+
+  <nav id="navebar">
+    <div class="navegcao">
+      <ul class="list-navegacao">
+        <li class="item dropdown">
+          <a rel="float-shadow" class="button float-shadow">Acionamento</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Subitem 1</a></li>
+            <li><a href="#">Subitem 2</a></li>
+            <li><a href="#">Subitem 3</a></li>
+          </ul>
+        </li>
+        <li class="item dropdown">
+          <a rel="float-shadow" class="button float-shadow">Escalation</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Subitem 1</a></li>
+            <li><a href="#">Subitem 2</a></li>
+            <li><a href="#">Subitem 3</a></li>
+          </ul>
+        </li>
+        <li class="item dropdown">
+          <a rel="float-shadow" class="button float-shadow">PP-Agendamento</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Subitem 1</a></li>
+            <li><a href="#">Subitem 2</a></li>
+            <li><a href="#">Subitem 3</a></li>
+          </ul>
+        </li>
+        <li class="item dropdown">
+          <a href="#" class="button float-shadow">Telecom Aprendizado</a>
+          <ul class="dropdown-content">
+            <li><a href="/dados/telecom-conhecimento/N1 - .pdf" target="_blank">N1 - Procedimento</a></li>
+            <li><a href="/dados/telecom-conhecimento/Recuperação de SDWAN com utilização do micro do GGL.pdf" target="_blank">Recuperação de SDWAN</a></li>
+            <li><a href="/dados/telecom-conhecimento/Como bypassar o Citrix.pdf" target="_blank">Bypassar Citrix</a></li>
+            <li><a href="/dados/telecom-conhecimento/Topologias e equipamentos de rede nas lojas.pdf" target="_blank">Topologia de rede</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+  <div id="searchResults" style="display:none;">
+    <h2 style="display:none;">Resultados da Pesquisa:</h2>
+    <ul id="resultsList" style="display:none;"></ul>
+  </div>
+  
+    
+
+    <div id="acionamento">
+        <div class="acionamento">   
+          
+          <div id="title-acionamento">
+            <span class="title-acionamento">Esacalation "OI"</span>
+        </div>          
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Helio Donisete Magatti</td>
+                        <td>helio.magatti@oi.net.br</td>
+                    </tr>
+                    <tr>
+                      <td>Danilo Mendes</td>
+                      <td>Danilo.mendes@oi.net.br</td>
+                    </tr>
+                    <tr>
+                      <td>Vinicius Passos De Moura</td>
+                      <td>vinicius.moura@oi.net.br</td>
+                    </tr>
+                    <tr>
+                      <td>pp-Atendimento</td>
+                      <td>pp-atendimentopersonalizado@projetooi.com.br</td>
+                    </tr>
+                    <tr>
+                      <td>Leandro Jose</td>
+                      <td>leandrojose@oi.net.br</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="title-acionamento">
+      <span class="title-acionamento">Esacalation "CLARO"</span>
+  </div> 
+  
+  <div class="acionamento">         
+  
+      <table>
+          <thead>
+              <tr>
+                  <th>Nome</th>
+                  <th>Email</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Controle de Ações LESULCONNE</td>
+                  <td>ca_lesulconne@claro.com.br</td>
+              </tr>   
+              <tr>
+                  <td>SILMARA GOMES RODARTE</td>
+                  <td>silmara.rodarte@claro.com.br</td>
+             </tr> 
+              <tr>
+                  <td>Luciano Johannsen</td>
+                  <td>luciano.johannsen@claro.com.br</td>
+              </tr> 
+              <tr>
+                  <td>sup_calesulconne@claro.com.br</td>
+                  <td>sup_calesulconne@claro.com.br</td>
+              </tr> 
+             <tr>
+                  <td>ANA CLAUDIA LIMA DA SILVA</td>
+                  <td>Ana.LimaSilva@claro.com.br</td>
+              </tr>  
+              <tr>
+                <td>Eduardo Zunzarren</td>
+                <td>eduardo.zunzarren.terceiro@claro.com</td>
+            </tr>    
+          </tbody>
+      </table>
+  </div>
+</div>
+
+
+
+  </section>
+
+  <footer>
+    <img src="/img/wave.svg" alt="">
+    <div id="footer_items">
+      <span id="copyright">
+        &copy 2024 Gustavo Codeço
+      </span>
+      <div class="social_media_buttons">
+        <a href="">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script>
+    function search() {
+      // Limpar resultados anteriores
+      const resultsList = document.getElementById("resultsList");
+      resultsList.innerHTML = "";
+      const searchInput = document.getElementById("searchInput").value.trim().toLowerCase();
+  
+      if (searchInput === "") {
+        alert("Por favor, insira um termo de pesquisa.");
+        return false; // Evitar que o formulário seja enviado
+      }
+  
+      // Selecionar todas as células da tabela
+      const cells = document.querySelectorAll("#acionamento table tbody td");
+      let found = false;
+  
+      // Percorrer as células e destacar os resultados
+      cells.forEach((cell) => {
+        // Limpar destaque anterior
+        const plainText = cell.textContent; // Texto original
+        cell.innerHTML = plainText; // Restaurar o texto original
+  
+        const text = plainText.toLowerCase();
+        if (text.includes(searchInput)) {
+          // Destacar o texto correspondente
+          const highlightedText = plainText.replace(
+            new RegExp(searchInput, 'gi'),
+            (match) => `<span style="background-color: yellow;">${match}</span>`
+          );
+          cell.innerHTML = highlightedText;
+  
+          // Adicionar ao resultado da pesquisa
+          const listItem = document.createElement("li");
+          listItem.textContent = cell.textContent; // Você pode personalizar o que exibir
+          resultsList.appendChild(listItem);
+          found = true;
+        }
+      });
+  
+      // Exibir ou ocultar a seção de resultados
+      const searchResults = document.getElementById("searchResults");
+      searchResults.style.display = found ? "block" : "none";
+  
+      return false; // Evitar que o formulário seja enviado
+    }
+  </script>
+  
+  
+  
+</body>
+</html>

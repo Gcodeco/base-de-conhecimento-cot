@@ -1,0 +1,170 @@
+
+body {
+  background: hsl(210, 32%, 20%);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+ 
+}
+
+/* Estilo do cabeçalho */
+header {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2; /* Garantir que o texto esteja acima da árvore */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Contêiner da árvore */
+.tree-container {
+  position: absolute; /* Permite que a árvore fique atrás do texto */
+  left: 50%; /* Centraliza a árvore horizontalmente */
+  top: 50%; /* Centraliza a árvore verticalmente */
+  transform: translate(-50%, -50%); /* Ajusta a posição da árvore */
+  width: 2vmin; /* Ajusta o tamanho da árvore */
+  height: 2vmin; /* Ajusta o tamanho da árvore */
+  z-index: -1; /* Coloca a árvore atrás do texto */
+}
+
+
+/* Árvore */
+.tree {
+  position: absolute; /* Para os filhos da árvore */
+  height: 50vmin;
+  width: 25vmin;
+  transform-style: preserve-3d;
+  animation: spin 2s infinite linear;
+  top: 16%;
+
+}
+
+
+/* Luzes da árvore */
+.tree__light {
+  position: absolute;
+  height: 1vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  animation: flash calc(var(--speed, 2) * 1s) calc(var(--delay, 0) * 1s) infinite steps(4),
+    appear 0.5s calc(var(--appear, 0) * 0.05s) both;
+  left: 50%;
+  transform: translate(-50%, 50%) rotateY(calc(var(--rotate, 0) * 1deg)) 
+    translate3d(0, 0, calc(var(--radius, 0) * 1vmin));
+  bottom: calc(var(--y, 0) * 1%);
+  background: red; /* Cor inicial */
+}
+
+
+/* Estrela da árvore */
+.tree__star {
+  stroke-width: 0.5vmin;
+  stroke: hsl(45, 80%, 80%);
+  filter: drop-shadow(0 0 2vmin hsl(45, 90%, 90%));
+  height: 5vmin;
+  width: 5vmin;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  stroke-dasharray: 1000 1000;
+  fill: hsl(45, 80%, 80%);
+  animation: stroke 1s calc(var(--delay, 0) * 0.05s) both;
+  z-index: 1;
+}
+
+/* Consultas de mídia para celular */
+@media (max-width: 768px) {
+  /* Ajustes para o corpo */
+  body {
+    perspective: 800px;
+  }
+
+  /* Tamanho do texto do cabeçalho */
+  header {
+    font-size: 1.2rem;
+  }
+
+  /* Tamanho da árvore */
+  .tree {
+    height: 40vmin; /* Reduz a altura */
+    width: 20vmin;  /* Reduz a largura */
+  }
+
+  /* Luzes e estrela ajustadas */
+  .tree__light {
+    height: 0.8vmin;
+    width: 0.8vmin;
+  }
+
+  .tree__star {
+    height: 4vmin;
+    width: 4vmin;
+  }
+}
+
+/* Consultas de mídia para telas muito pequenas */
+@media (max-width: 480px) {
+  /* Ajustes adicionais para cabeçalhos */
+  header {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  /* Tamanho da árvore */
+  .tree {
+    height: 70vmin;
+    width: 19vmin;
+  }
+
+  /* Luzes e estrela ainda menores */
+  .tree__light {
+    height: 0.6vmin;
+    width: 0.6vmin;
+  }
+
+  .tree__star {
+    height: 3vmin;
+    width: 3vmin;
+  }
+}
+
+/* Animações */
+@keyframes stroke {
+  from {
+    stroke-dashoffset: -1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0%, 100% {
+    background: red;
+  }
+  20%, 60% {
+    background: white;
+  }
+}
+

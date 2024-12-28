@@ -1,0 +1,106 @@
+/* Container para os botões */
+.container-botoes {
+  display: flex; /* Usar Flexbox para layout */
+  justify-content: space-around; /* Espaço uniforme entre os botões */
+  margin-top: 20px; /* Margem superior para separação */
+}
+
+/* Estilos para a seção web-loja */
+.web-loja {
+  display: inline-block;
+  margin-right: 15px;
+  z-index: 100;
+}
+
+.web-loja a {
+  color: white; /* Cor do texto padrão */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.web-loja a:hover {
+  color: black; /* Texto preto no hover */
+  background-color: white; /* Fundo branco no hover */
+}
+
+/* Estilos para a seção total-loja */
+.total-loja {
+  display: inline-block;
+}
+
+.total-loja a {
+  color: white; /* Cor do texto padrão */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.total-loja a:hover {
+  color: black; /* Texto preto no hover */
+  background-color: white; /* Fundo branco no hover */
+}
+
+.pasta-validacao {
+  display: inline-block;
+}
+
+.pasta-validacao a {
+  color: white; /* Cor do texto padrão */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pasta-validacao a:hover {
+  color: black; /* Texto preto no hover */
+  background-color: white; /* Fundo branco no hover */
+}
+
+
+
+
+
+.web-loja-icon {
+  font-size: 24px; /* Tamanho do ícone */
+  color: #fff; /* Cor do ícone */
+  text-decoration: none; /* Remove o sublinhado do link */
+  padding: 10px; /* Espaçamento ao redor do ícone */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s, color 0.3s; /* Efeito de transição */
+}
+
+.web-loja-icon:hover {
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+  color: #007bff; /* Cor do ícone ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-botoes {
+    flex-direction: column; /* Mudar para coluna em telas menores */
+    align-items: center; /* Centralizar os botões */
+  }
+
+  .web-loja, .total-loja .pasta-validacao {
+    margin: 10px 0; /* Margem entre os botões */
+  }
+}

@@ -1,0 +1,36 @@
+footer{
+    background-color: var(--color-primary-2);
+    margin-top: 60vh;
+    
+   
+
+}
+
+#footer_items{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 8% 24px 8%;
+    align-items: center;
+}
+
+#copyright{
+    color: var(--color-neutral-0);
+    font-weight: 500;
+    text-align: center; /* Centraliza para dispositivos menores */
+}
+
+
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    #footer_items {
+        flex-direction: column; /* Alinha os itens em coluna */
+        gap: 20px; /* Espaço entre os itens */
+        text-align: center; /* Centraliza textos */
+    }
+
+    footer {
+        margin-top: 60vh; /* Reduz o espaçamento para telas menores */
+      
+    }
+}
